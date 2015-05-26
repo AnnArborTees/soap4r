@@ -64,7 +64,7 @@ loaded = false
     # XXX: MUST BE REMOVED IN THE FUTURE
     name = lib.sub(/^.*\//, '')
     raise LoadError unless XSD::XMLParser.constants.find { |c|
-      c.to_s.downcase == name
+      c.to_s.downcase == name.to_s
     }
     loaded = true
     break
